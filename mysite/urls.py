@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    # 命名空间叫做blog样你可以方便的引用这个URLs组。
     url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
 ]

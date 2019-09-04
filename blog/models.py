@@ -46,6 +46,8 @@ class Post(models.Model):
         return reverse('blog:post_detail',
                        args=[
                            self.publish.year,
+                        #    我们通过使用strftime()方法来保证个位数的月份和日期需要带上0来构建URL
                            self.publish.strftime('%m'),
                            self.publish.strftime('%d'), self.slug
                        ])
+    
